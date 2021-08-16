@@ -1,6 +1,6 @@
 import { Routes} from "@angular/router";
-import {EventListComponent} from "./event-list/event-list.component";
-import {EventDetailsComponent} from "./event-details/event-details.component";
+import {EventListComponent} from "./events/event-list/event-list.component";
+import {EventDetailsComponent} from "./events/event-details/event-details.component";
 
 // NOTE: The order of route objects is very important
 export const routes: Routes = [
