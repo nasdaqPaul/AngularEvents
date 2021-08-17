@@ -1,10 +1,9 @@
-import { Routes} from "@angular/router";
-import {EventListComponent} from "./events/event-list/event-list.component";
-import {EventDetailsComponent} from "./events/event-details/event-details.component";
+import {Routes} from "@angular/router";
+import {NotFoundComponent} from "./core/components/not-found.component";
 
 // NOTE: The order of route objects is very important
 export const routes: Routes = [
-  {path:"events", component: EventListComponent},
-  {path:"events/:eventId", component: EventDetailsComponent},
-  {path:"", redirectTo:"events", pathMatch:"full"}
+  {path: "", loadChildren: () => import('./events/events.module').then(m => m.EventsModule)},
+  {path: 'auth', loadChildren: () => import('./core/authentication/authentication.module').then(module => module.AuthenticationModule)},
+  {path: "**", component: NotFoundComponent}
 ]
