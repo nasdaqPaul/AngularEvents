@@ -1,0 +1,21 @@
+<main class="container">
+  <section id="details">
+    <h1 class="display-3 mb-2">{{event.name}}</h1>
+    <div class="row">
+      <div class="col-md-3 col-12">
+        <img [src]="event.imageUrl" alt="" style="height: 130px;">
+      </div>
+      <div class="col">
+        <dl class="row">
+          <dt class="col-2 text-end" *ngIf="event.location">Location</dt><dd class="col-10" *ngIf="event.location">{{event.location.address}} {{event.location.city}} {{event.location.country}}</dd>
+          <dt class="col-2 text-end" *ngIf="event.onlineUrl">Online URL</dt><dd class="col-10" *ngIf="event.onlineUrl">{{event.onlineUrl}}</dd>
+          <dt class="col-2 text-end">Price</dt><dd class="col-10">{{event.price}}</dd>
+          <dt class="col-2 text-end">Time</dt><dd class="col-10">{{event.time}}</dd>
+          <dt class="col-2 text-end">Date</dt><dd class="col-10">{{event.date}}</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+  <hr>
+  <session-list [sessions]="event.sessions"></session-list>
+</main>

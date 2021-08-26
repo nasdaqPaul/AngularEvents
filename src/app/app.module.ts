@@ -7,7 +7,7 @@ import {RouterModule} from "@angular/router";
 import {routes} from "./router";
 import {FooterComponent} from "./core/components/footer.component";
 import {NotFoundComponent} from "./core/components/not-found.component";
-import {AuthenticationService} from "./core/authentication/services/authentication.service";
+import {AuthenticationService} from "./core/authentication.module/services/authentication.service";
 
 @NgModule({
   declarations: [
