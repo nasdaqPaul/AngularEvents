@@ -1,6 +1,7 @@
-# AngularEvents
+# Angular Events
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
+An Angular application for listing and creating event.\
+This project was developed as part of a course in front-end web development
 
 ## Development server
 

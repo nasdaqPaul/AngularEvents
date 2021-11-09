@@ -3,7 +3,16 @@ import {EventsService} from "../services/events.service";
 
 @Component({
   selector: 'event-list',
-  templateUrl: 'event-list.component.html'
+  templateUrl: 'event-list.component.html',
+  styles: [
+    `
+        event-thumbnail:hover {
+          background-color: red;
+          cursor: pointer;
+        }
+    `
+  ]
+
 })
 export class EventListComponent implements OnInit{
   events: any;

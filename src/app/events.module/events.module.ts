@@ -7,10 +7,12 @@ import {EventDetailsComponent} from "./event-details.component/event-details.com
 import {CommonModule} from "@angular/common";
 import {EventDetailsResolver} from "./resolvers/event-details.resolver";
 import {SessionListComponent} from "./event-details.component/session-list.component/session-list.component";
+import {EventCreateComponent} from "./event-create.component/event-create.component";
 
 const routes: Routes = [
   {path: 'events', component: EventListComponent},
   {path: '', redirectTo: 'events', pathMatch: 'full'},
+  {path: 'events/new', component: EventCreateComponent},
   {path: 'events/:eventId', component: EventDetailsComponent, resolve: {event: EventDetailsResolver}}
 ]
 
@@ -23,7 +25,8 @@ const routes: Routes = [
     EventListComponent,
     EventThumbnailComponent,
     EventDetailsComponent,
-    SessionListComponent
+    SessionListComponent,
+    EventCreateComponent
   ],
   providers: [
     EventsService,
